@@ -14,6 +14,10 @@ public class CinematicTransition : MonoBehaviour
  
     public RawImage overlay;
 
+    public string FullText;
+    public GameObject storyObject;
+    public Text story;
+
     void Update()
     {
         if (stage == 1) {
@@ -21,6 +25,12 @@ public class CinematicTransition : MonoBehaviour
         }
         if (stage == 2) {
             ClearScene ();
+            stage = 3;
+        }
+        if (stage == 3) {
+            storyObject.SetActive(true);
+            StartCoroutine( AnimateText() );
+            stage = 4;
         }
  
      }
@@ -49,10 +59,24 @@ public class CinematicTransition : MonoBehaviour
         }
     }
 
+
+    IEnumerator AnimateText() {
+
+        int i = 0;
+        story.text = "";
+        while( i < FullText.Length ) {
+            story.text += FullText[i++];
+            yield return new WaitForSeconds(0.1F);
+        }
+
+    }
+
+
     public void StageStrater () {
         if (stage == 0) {
             stage = 1;
         }
     }
+
 
 }
