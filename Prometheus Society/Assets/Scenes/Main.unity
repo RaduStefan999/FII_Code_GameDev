@@ -702,6 +702,7 @@ MonoBehaviour:
     Global Warming. As a member of this society, you must do everything in your power
     to help stop Global Warming.'
   storyObject: {fileID: 993521332}
+  overlayObject: {fileID: 1601094256}
   story: {fileID: 993521334}
 --- !u!4 &1049084832
 Transform:

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CinematicTransition : MonoBehaviour
 {
-    public float timeToStartFading = 2f;
+    public float timeToStartFading = 0.5f;
     public float fadeSpeed = 1f;
 
     public GameObject[] SceneObjects_To_Clear;
@@ -16,6 +16,7 @@ public class CinematicTransition : MonoBehaviour
 
     public string FullText;
     public GameObject storyObject;
+    public GameObject overlayObject;
     public Text story;
 
     void Update()
@@ -31,6 +32,12 @@ public class CinematicTransition : MonoBehaviour
             storyObject.SetActive(true);
             StartCoroutine( AnimateText() );
             stage = 4;
+        }
+        if (stage == 5) {
+            DimmerStage ();
+        }
+        if (stage == 6) {
+            RemoverStage ();
         }
  
      }
@@ -59,6 +66,28 @@ public class CinematicTransition : MonoBehaviour
         }
     }
 
+    void DimmerStage () {
+        //Timer
+        if (!(story.color.a < 0))
+        {
+            story.color = new Color(story.color.r, story.color.g, story.color.b, story.color.a - (fadeSpeed * Time.deltaTime));
+        }
+        else {
+            overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, overlay.color.a - (fadeSpeed * Time.deltaTime));
+        }
+ 
+        //Reality Check
+        if (overlay.color.a < 0 && story.color.a < 0) {
+            stage = 6;
+        }
+    }
+
+    void RemoverStage () {
+        Destroy(overlayObject);
+        Destroy(storyObject);
+        this.enabled = false;
+    }
+
 
     IEnumerator AnimateText() {
 
@@ -68,7 +97,7 @@ public class CinematicTransition : MonoBehaviour
             story.text += FullText[i++];
             yield return new WaitForSeconds(0.1F);
         }
-
+        stage = 5;
     }
 
 
