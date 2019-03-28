@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/LAN_Install/Documents/FII_Code_GameDev/CompiledVersion/PRS 0.4.apk
+C:/Users/LAN_Install/Documents/FII_Code_GameDev/CompiledVersion/PRS 0.7.apk
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -159,3 +159,4 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+65b13fc49712977069cbc00ee8a63b2f Assembly-CSharp.dll:.TouchCamera
