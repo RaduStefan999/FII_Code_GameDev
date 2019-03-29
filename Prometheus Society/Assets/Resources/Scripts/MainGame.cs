@@ -53,6 +53,19 @@ public class MainGame : MonoBehaviour
 
     Color lerpedColor = Color.white;
 
+    public GameObject RegionPartition;
+
+    public GameObject Europe_Region;
+    public GameObject Africa_Arabia_Region;
+    public GameObject S_Africa_Region;
+    public GameObject N_Asia_Region;
+    public GameObject S_Asia_Region;
+    public GameObject Australia_Region;
+    public GameObject Antarctica_Region;
+    public GameObject S_America_Region;
+    public GameObject N_America_Region;
+    public GameObject Greenland_Iceland_Region;
+
 
     void Start()
     {
@@ -175,6 +188,7 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayHappynes () {
+        DisablePartition ();
         TechTexture.SetActive(false);
         TechnologyImg.color = Color.white;
         HappynesImg.color = Color.yellow;
@@ -213,6 +227,7 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayPolution () {
+        DisablePartition ();
         TechTexture.SetActive(false);
         TechnologyImg.color = Color.white;
         HappynesImg.color = Color.white;
@@ -251,6 +266,7 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayIndustry () {
+        DisablePartition ();
         TechTexture.SetActive(false);
         TechnologyImg.color = Color.white;
         HappynesImg.color = Color.white;
@@ -289,6 +305,7 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayTechnology () {
+        DisablePartition ();
         TechTexture.SetActive(true);
         TechnologyImg.color = Color.yellow;
         HappynesImg.color = Color.white;
@@ -297,42 +314,81 @@ public class MainGame : MonoBehaviour
     }
 
     public void Develop_Europe () {
-        Debug.Log ("Develop_Europe");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        Europe_Region.SetActive(true);
     }
 
     public void Develop_AfricaArabia () {
-        Debug.Log ("Develop_AfricaArabia");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        Africa_Arabia_Region.SetActive(true);
     }
 
     public void Develop_SAfrica () {
-        Debug.Log ("Develop_SAfrica");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        S_Africa_Region.SetActive(true);
+
     }
 
     public void Develop_Australia () {
-        Debug.Log ("Develop_Australia");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        Australia_Region.SetActive(true);
     }
 
     public void Develop_SAsia () {
-        Debug.Log ("Develop_SAsia");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        S_Asia_Region.SetActive(true);
     }
 
     public void Develop_NAsia () {
-        Debug.Log ("Develop_NAsia");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        N_Asia_Region.SetActive(true);
     }
 
     public void Develop_Antarctica () {
-        Debug.Log ("Develop_Antarctica");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        Antarctica_Region.SetActive(true);
     }
 
     public void Develop_GreenlandIceland () {
-        Debug.Log ("Develop_GreenlandIceland");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        Greenland_Iceland_Region.SetActive(true);
     }
 
     public void Develop_NAmerica () {
-        Debug.Log ("Develop_NAmerica");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        N_America_Region.SetActive(true);
     }
 
     public void Develop_SAmerica () {
-        Debug.Log ("Develop_SAmerica");
+        CleanPartition();
+        RegionPartition.SetActive(true);
+        S_America_Region.SetActive(true);
+    }
+
+    public void CleanPartition () {
+        Europe_Region.SetActive(false);
+        Africa_Arabia_Region.SetActive(false);
+        S_Africa_Region.SetActive(false);
+        N_Asia_Region.SetActive(false);
+        S_Asia_Region.SetActive(false);
+        Australia_Region.SetActive(false);
+        Antarctica_Region.SetActive(false);
+        S_America_Region.SetActive(false);
+        N_America_Region.SetActive(false);
+        Greenland_Iceland_Region.SetActive(false);
+    }
+
+    public void DisablePartition () {
+        CleanPartition ();
+        RegionPartition.SetActive(false);
     }
 }
