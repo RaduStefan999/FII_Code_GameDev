@@ -85,6 +85,7 @@ public class CinematicTransition : MonoBehaviour
     void RemoverStage () {
         Destroy(overlayObject);
         Destroy(storyObject);
+        this.GetComponent<MainGame>().enabled = true;
         this.enabled = false;
     }
 

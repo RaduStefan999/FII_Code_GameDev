@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Scripts\CinematicTransition.cs" />
+     <Compile Include="Assets\Resources\Scripts\MainGame.cs" />
      <Compile Include="Assets\Resources\Scripts\TouchCamera.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/LAN_Install/Documents/FII_Code_GameDev/Prometheus Society/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
