@@ -61,8 +61,18 @@ public class MainGame : MonoBehaviour
         //ConstructingTheWorld
         World.Europe.GraphicComponent = GameObject.Find("Europe");
         World.Europe.Happynes = 0.8f;
-        World.Europe.Polution = 0.5f;
-        World.Europe.Industry = 0.7f;
+        World.Europe.Polution = 0.6f;
+        World.Europe.Industry = 0.75f;
+
+        World.AfricaAarabia.GraphicComponent = GameObject.Find("Africa-Arabia");
+        World.AfricaAarabia.Happynes = 0.3f;
+        World.AfricaAarabia.Polution = 0.4f;
+        World.AfricaAarabia.Industry = 0.3f;
+
+        World.Australia.GraphicComponent = GameObject.Find("Australia");
+        World.Australia.Happynes = 0.75f;
+        World.Australia.Polution = 0.7f;
+        World.Australia.Industry = 0.5f;
     }
 
 
@@ -127,13 +137,33 @@ public class MainGame : MonoBehaviour
     public void DisplayHappynes () {
         lerpedColor = Color.Lerp(Color.red, Color.green, World.Europe.Happynes);
         World.Europe.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.AfricaAarabia.Happynes);
+        World.AfricaAarabia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Australia.Happynes);
+        World.Australia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
     }
 
     public void DisplayPolution () {
-        
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Europe.Polution);
+        World.Europe.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.AfricaAarabia.Polution);
+        World.AfricaAarabia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Australia.Polution);
+        World.Australia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
     }
 
     public void DisplayIndustry () {
-        
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Europe.Industry);
+        World.Europe.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.AfricaAarabia.Industry);
+        World.AfricaAarabia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Australia.Industry);
+        World.Australia.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
     }
 }
