@@ -2019,7 +2019,7 @@ MonoBehaviour:
   stage: 0
   overlay: {fileID: 1601094258}
   FullText: 'The Prometheus Society is a worldwide group of highly intelligent people
-    who have recently been tasked with solving one of the biggest problem of our time:
+    who have recently been tasked with solving one of the worst problem of our time:
     Global Warming. As a member of this society, you must do everything in your power
     to help stop Global Warming.'
   storyObject: {fileID: 993521332}
@@ -2056,6 +2056,9 @@ MonoBehaviour:
   Pause: {fileID: 1429365619}
   GameSpeed: 5
   UI_Time: {fileID: 238232660}
+  HappynesImg: {fileID: 1157185955}
+  NatureImg: {fileID: 187928214}
+  IndustryImg: {fileID: 293966459}
 --- !u!1 &1099591756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,7 +3190,7 @@ GameObject:
   - component: {fileID: 1578298959}
   - component: {fileID: 1578298960}
   m_Layer: 0
-  m_Name: Antactica
+  m_Name: Antarctica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
