@@ -21,7 +21,32 @@ public class MainGame : MonoBehaviour
 
     public InGameTime curentTime;
 
+
+    public struct RegionData {
+        public float Happynes;
+        public float Polution;
+        public float Industry;
+        public GameObject GraphicComponent;
+    };
+
+    public struct Regions {
+        public RegionData Europe;
+        public RegionData AfricaAarabia;
+        public RegionData SAfrica;
+        public RegionData NAmerica;
+        public RegionData SAmerica;
+        public RegionData Antarctica;
+        public RegionData NAsia;
+        public RegionData SAsia;
+        public RegionData Australia;
+        public RegionData IcelandGreenland;
+    }
+
+
     public Text UI_Time;
+    public Regions World;
+
+    Color lerpedColor = Color.white;
 
 
     void Start()
@@ -32,6 +57,12 @@ public class MainGame : MonoBehaviour
         curentTime.Year = 2019;
 
         nextUpdate = (1f / GameSpeed);
+
+        //ConstructingTheWorld
+        World.Europe.GraphicComponent = GameObject.Find("Europe");
+        World.Europe.Happynes = 0.8f;
+        World.Europe.Polution = 0.5f;
+        World.Europe.Industry = 0.7f;
     }
 
 
@@ -91,5 +122,18 @@ public class MainGame : MonoBehaviour
         Play.SetActive(true);
         Pause.SetActive(false);
         TimeStatus = false;
+    }
+
+    public void DisplayHappynes () {
+        lerpedColor = Color.Lerp(Color.red, Color.green, World.Europe.Happynes);
+        World.Europe.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+    }
+
+    public void DisplayPolution () {
+        
+    }
+
+    public void DisplayIndustry () {
+        
     }
 }
