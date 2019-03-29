@@ -295,4 +295,44 @@ public class MainGame : MonoBehaviour
         NatureImg.color = Color.white;
         IndustryImg.color = Color.white;
     }
+
+    public void Develop_Europe () {
+        Debug.Log ("Develop_Europe");
+    }
+
+    public void Develop_AfricaArabia () {
+        Debug.Log ("Develop_AfricaArabia");
+    }
+
+    public void Develop_SAfrica () {
+        Debug.Log ("Develop_SAfrica");
+    }
+
+    public void Develop_Australia () {
+        Debug.Log ("Develop_Australia");
+    }
+
+    public void Develop_SAsia () {
+        Debug.Log ("Develop_SAsia");
+    }
+
+    public void Develop_NAsia () {
+        Debug.Log ("Develop_NAsia");
+    }
+
+    public void Develop_Antarctica () {
+        Debug.Log ("Develop_Antarctica");
+    }
+
+    public void Develop_GreenlandIceland () {
+        Debug.Log ("Develop_GreenlandIceland");
+    }
+
+    public void Develop_NAmerica () {
+        Debug.Log ("Develop_NAmerica");
+    }
+
+    public void Develop_SAmerica () {
+        Debug.Log ("Develop_SAmerica");
+    }
 }
