@@ -7,7 +7,7 @@ public class MainGame : MonoBehaviour
 {
 
     public bool TimeStatus = false;
-    public GameObject Play, Pause;
+    public GameObject Play, Pause, TechTexture;
 
     public int GameSpeed = 5;
 
@@ -46,6 +46,7 @@ public class MainGame : MonoBehaviour
     public Text UI_Time;
     public Regions World;
 
+    public RawImage TechnologyImg;
     public RawImage HappynesImg;
     public RawImage NatureImg;
     public RawImage IndustryImg;
@@ -174,6 +175,8 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayHappynes () {
+        TechTexture.SetActive(false);
+        TechnologyImg.color = Color.white;
         HappynesImg.color = Color.yellow;
         NatureImg.color = Color.white;
         IndustryImg.color = Color.white;
@@ -210,6 +213,8 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayPolution () {
+        TechTexture.SetActive(false);
+        TechnologyImg.color = Color.white;
         HappynesImg.color = Color.white;
         NatureImg.color = Color.yellow;
         IndustryImg.color = Color.white;
@@ -246,6 +251,8 @@ public class MainGame : MonoBehaviour
     }
 
     public void DisplayIndustry () {
+        TechTexture.SetActive(false);
+        TechnologyImg.color = Color.white;
         HappynesImg.color = Color.white;
         NatureImg.color = Color.white;
         IndustryImg.color = Color.yellow;
@@ -279,5 +286,13 @@ public class MainGame : MonoBehaviour
 
         lerpedColor = Color.Lerp(Color.red, Color.blue, World.SAmerica.Industry);
         World.SAmerica.GraphicComponent.GetComponent<SpriteRenderer>().color = lerpedColor;
+    }
+
+    public void DisplayTechnology () {
+        TechTexture.SetActive(true);
+        TechnologyImg.color = Color.yellow;
+        HappynesImg.color = Color.white;
+        NatureImg.color = Color.white;
+        IndustryImg.color = Color.white;
     }
 }

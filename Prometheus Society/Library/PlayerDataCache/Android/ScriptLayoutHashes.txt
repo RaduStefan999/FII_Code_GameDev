@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/LAN_Install/Documents/FII_Code_GameDev/CompiledVersion/PRS 1.2.apk
+C:/Users/LAN_Install/Documents/FII_Code_GameDev/CompiledVersion/PRS 1.3.apk
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -114,7 +114,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-e5c801aa477235bb06122e375a4542ef Assembly-CSharp.dll:.MainGame
+5902acde73a13f9d63a3972d6dbeb65b Assembly-CSharp.dll:.MainGame
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 51689a7e885fd706ca2c5112a496f2e6 Assembly-CSharp.dll:.CinematicTransition
